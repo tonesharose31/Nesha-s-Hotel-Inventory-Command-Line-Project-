@@ -9,7 +9,7 @@ roomTypes: faker.science.chemicalElement(),
  }
 return hotels 
 }
-
+console.log (myHotelChoices(3))
 
 function randomHotelFactory (number){
     const hotel = [];

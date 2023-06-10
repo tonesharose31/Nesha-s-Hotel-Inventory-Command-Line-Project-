@@ -1,14 +1,29 @@
 const  { faker }  = require("@faker-js/faker")
 
-let myHotels = [
-{
-hotelNames = faker.name.findName(),
-roomPrice = faker.finance.currencySymbol().faker.number.binary(),
-availableRooms =faker.boolean(),
-roomTypes= faker.science.chemicalElement(),
-
+function myHotelChoices() {
+    let hotels = {
+hotelNames : faker.name.findName(),
+roomPrice : faker.finance.currencySymbol().faker.number.binary(),
+availableRooms : faker.boolean(),
+roomTypes: faker.science.chemicalElement(),
+ }
+return hotels 
 }
-return myHotels 
+
+
+function randomHotelFactory (number){
+    const hotel = [];
+    for(let i ; i < number; i++){
+        hotel.push(myHotelChoices())
+    }
+    return hotel 
+}
+
+
+module.exports = { 
+    myHotelChoices,
+    randomHotelFactory
+}
 
 // console.log(hotelNames),
 // console.log(availableRooms),
@@ -28,5 +43,4 @@ return myHotels
 
 //     },
 
-}]
-  
+

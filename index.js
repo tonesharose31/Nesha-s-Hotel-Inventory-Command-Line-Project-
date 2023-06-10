@@ -1,4 +1,4 @@
-const { myHotelChoices, randomHotelFactory  } = require("./data")
+const { myHotelChoices, randomHotelFactory  } = require("./src/hotels")
 
 function run(){
     if(process.argv[3]){
@@ -6,6 +6,7 @@ function run(){
     }else{
         console.log(myHotelChoices())
     }
+   
 }
 run()
 

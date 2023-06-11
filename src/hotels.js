@@ -3,7 +3,7 @@ const {faker} = require("@faker-js/faker")
 function myHotelChoices() {
 const room = faker.science.chemicalElement().name
 let amount = faker.string.numeric(); 
-const currencyUSD = "$" + amount 
+const currencyUSD = "$" + amount * 100
 let fakerHotel = faker.person.fullName() 
 const hotelDesguise = `${fakerHotel + " " + ('Hotel')}`
 
@@ -11,7 +11,7 @@ let hotels = {
 hotelNames : hotelDesguise,
 roomPrice : currencyUSD,
 availableRooms : faker.datatype.boolean(),
-roomTypes: room,
+roomStyle: room,
 }
 return hotels 
 }
@@ -27,8 +27,6 @@ function generateHotelsFactory(numObjects){
         return hotelArray;
     }
 
-
-
 module.exports = { 
     myHotelChoices,
     generateHotelsFactory
@@ -40,6 +38,6 @@ module.exports = {
 // console.log(roomTypes),
 
 
-//     },
+//  },
 
 

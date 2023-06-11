@@ -9,7 +9,7 @@
     "show": "node index.js show",
     "test": "jest"
   },
-  
+  "keywords": [],
   "author": "Tonesha Rose",
   "license": "ISC",
   "dependencies": {

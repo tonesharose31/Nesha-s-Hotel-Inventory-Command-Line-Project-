@@ -41,16 +41,6 @@ module.exports = {
 // console.log(roomPrice),
 // console.log(roomTypes),
 
-// {
-//     hotelNames = 
-//     availableRooms =
-//     roomTypes =
-//     roomPrice =
-
-//     {hotelNames = 
-//         availableRooms =
-//         roomTypes =
-//         roomPrice =
 
 //     },
 

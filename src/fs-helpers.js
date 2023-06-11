@@ -8,7 +8,7 @@ function readJSONFile(path, fileName){
 }
 
 function writeJSONFile (path, fileName, data){
-const data = JSON.stringify(data);
+ data = JSON.stringify(data);
     return writeFileSync(`${path}/${fileName}`, data, { encoding: "utf-8"});
 }
 module.exports ={

@@ -1,11 +1,9 @@
 const {faker} = require("@faker-js/faker")
 
-
-
 function myHotelChoices() {
 const room = faker.science.chemicalElement().name
 let amount = faker.string.numeric(); 
-const currencyUSD = '$' + amount * 100 
+const currencyUSD = "$" + amount 
 let fakerHotel = faker.person.fullName() 
 const hotelDesguise = `${fakerHotel + " " + ('Hotel')}`
 

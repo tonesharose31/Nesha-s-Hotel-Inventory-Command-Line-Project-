@@ -1,12 +1,15 @@
-const { myHotelChoices, randomHotelFactory  } = require("./src/hotels")
+const { myHotelChoices, generateHotelsFactory  } = require("./src/hotels")
+const  { readJSONFile, writeJSONFile } = require("./src/fs-helpers")
 
 function run(){
-    if(process.argv[4]){
-        console.log(randomHotelFactory(process.argv[3]))
+    const hotelArray = readJSONFile( "./data, hotellist.json")
+    console.log(hotel)
+    if(process.argv[3]){
+        hotelArray.push(...generateHotelsFactory(process.argv[3]))
     }else{
-        console.log(myHotelChoices())
+        hotelArray.push(myHotelChoices())
     }
-   
+   writeJSONFile("./data, hotellist.json", hotelArray)
 }
 run()
 

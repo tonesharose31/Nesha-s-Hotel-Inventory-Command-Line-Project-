@@ -2,13 +2,14 @@
   "name": "project-command-line-inventory-app",
   "version": "1.0.0",
   "description": "Bringing together all you've learned so far, about JavaScript and building applications, I have built a Command-line Inventory Application. It will be an application where employees can keep track of the inventory of hotel rooms. Employees can add new rooms, update rooms, see a list of rooms, see details of one room and delete rooms.",
-  "main": "index.js",
+  "main": "node index.js",
   "scripts": {
     "create": "node index.js create",
     "start": "node index.js start",
+    "show": "node index.js show",
     "test": "jest"
   },
-  "keywords": [],
+  
   "author": "Tonesha Rose",
   "license": "ISC",
   "dependencies": {

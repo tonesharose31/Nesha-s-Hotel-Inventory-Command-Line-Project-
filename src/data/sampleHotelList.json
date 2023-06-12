@@ -371,5 +371,19 @@
     "roomPrice": "$400",
     "availableRooms": false,
     "roomStyle": "Tellurium"
+  },
+  {
+    "id": "IoUh1_",
+    "hotelNames": "Archie Adams-Nitzsche Hotel",
+    "roomPrice": "$600",
+    "availableRooms": false,
+    "roomStyle": "Potassium"
+  },
+  {
+    "id": "W5Fc-5",
+    "hotelNames": "Annie Powlowski Hotel",
+    "roomPrice": "$300",
+    "availableRooms": false,
+    "roomStyle": "Platinum"
   }
 ]

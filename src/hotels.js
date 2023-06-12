@@ -30,6 +30,10 @@ function generateHotelsFactory(numObjects){
     }
 
 
+    function (params) {
+        
+    }
+
 
 module.exports = { 
     myHotelChoices,

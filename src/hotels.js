@@ -1,4 +1,5 @@
-const {faker} = require("@faker-js/faker")
+const {faker} = require("@faker-js/faker");
+const { nanoid } = require("nanoid");
 
 function myHotelChoices() {
 const room = faker.science.chemicalElement().name
@@ -8,6 +9,7 @@ let fakerHotel = faker.person.fullName()
 const hotelDesguise = `${fakerHotel + " " + ('Hotel')}`
 
 let hotels = {
+id: nanoid(6),
 hotelNames : hotelDesguise,
 roomPrice : currencyUSD,
 availableRooms : faker.datatype.boolean(),
@@ -15,7 +17,7 @@ roomStyle: room,
 }
 return hotels 
 }
-//console.log(faker)
+
 
 function generateHotelsFactory(numObjects){
     const hotelArray =[];
@@ -26,6 +28,8 @@ function generateHotelsFactory(numObjects){
         }
         return hotelArray;
     }
+
+
 
 module.exports = { 
     myHotelChoices,

@@ -61,10 +61,4 @@ const animal = process.argv[3];
 run()
 
 
-
-
-
-
-
-
-/
+//This is where it got hazy for me!

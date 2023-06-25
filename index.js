@@ -5,7 +5,6 @@ const inform = console.log
 
 const run = () => {
 
-    infrorm("It's Nesha's Hotel App");
 
     let assets = readJSONFile("./src/data", "hotels.json")
     
@@ -17,14 +16,14 @@ const run = () => {
     const hotels = process.argv[3];
    
     switch (action) {
-        
+
             case "index" :
             const hotelList = index(assets);
             inform(hotelList);
             break;   
        
         case "create" :
-            updatedHotels = create(assets, hotels);
+            updatedHotels = create(assets, hotels,);
             writeToFile = true;
             break;
         
@@ -43,21 +42,12 @@ const run = () => {
             writeToFile = true;
             break ;  
     
-        case "score" :
-            inform(score(assets))
-            break; 
-
         default :
       inform("hey there was an error")  
     }
-    if (writeToFile) {
-        inform("new data detected - updating")
-        
-        writeJSONFile("./data", "hotels.json", updatedHotels)
+    if (writeToFile) {      
+ writeJSONFile("./data", "hotels.json", updatedHotels);
     }
-
 }
-
-
-run()
+run();
 

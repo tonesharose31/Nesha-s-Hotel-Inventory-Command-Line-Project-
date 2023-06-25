@@ -2,33 +2,48 @@
 const inform = console.log;
 const { nanoid } = require("nanoid");
 const chalk = require("chalk");
-const data = require("./data/hotels.json")
+const data = require("./hotels.json")
 
 function create( goCart,newTels) {
     const index = data.find(
-        (hotels) => hotels.hotelNames === newTels
+        (hotels) => hotels.hotelDesguise=== newTels
     );
 const hotelCheck = {
          id: `${nanoid(6)}`,
-        hotelNames : newTels,
-        roomPrice : index.roomPrice,
+        hotelDesguise : newTels,
+        roomPrice : index.currencyUSD,
         availableRooms : index.availableRooms,
-        roomStyle: index.roomStyle
+        room: index.room
         }
-        goCart.push(hotelCheck);
+        goCart.push(hotelCheck)
         return goCart
         }
 
 
-   function index(goCart) {
-    return goCart.map( 
-        (eachHotels) => eachHotels.id + " " + eachHotels.hotelNames + " " + eachHotels.roomPrice + "" + eachHotels.availableRooms+ " " +eachHotels.roomStyle);
-    }
+
+        function index(goCart){
+         const hotelFeeds=[];
+             for(let i = 0; i< goCart; i++){
+                hotelFeeds.push(create())
+               }
+            return hotelFeeds;
+            }
+
+        
+
+
+
+
+
+//    function index(goCart) {
+//      goCart.map( 
+//         (eachHotels) => eachHotels.id + " " + eachHotels.hotelNames + " " + eachHotels.roomPrice + "" + eachHotels.availableRooms+ " " +eachHotels.roomStyle);
+//     }
     
     
     
    
-    index();
+   index();
 
 
 
@@ -59,5 +74,5 @@ const hotelCheck = {
 
 
 module.exports= {
-    index,create, show, update, destroy
+    index,create// show, update, destroy
 }

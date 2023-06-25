@@ -1,5 +1,4 @@
-const hotels = [
-
+[
   {
     "hotelNames": "Dr. Johnathan Purdy Hotel",
     "roomPrice": "$200",
@@ -389,4 +388,3 @@ const hotels = [
   }
 ]
 
-module.exports = hotels;

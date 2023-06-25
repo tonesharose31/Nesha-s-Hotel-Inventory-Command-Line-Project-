@@ -1,4 +1,5 @@
-[
+const hotels = [
+
   {
     "hotelNames": "Dr. Johnathan Purdy Hotel",
     "roomPrice": "$200",
@@ -387,3 +388,5 @@
     "roomStyle": "Platinum"
   }
 ]
+
+module.exports = hotels;

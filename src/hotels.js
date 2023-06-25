@@ -35,14 +35,7 @@ function generateHotelsFactory(numObjects){
 module.exports = { 
     myHotelChoices,
     generateHotelsFactory
-}
+};
 
-//console.log(hotelNames)
-// console.log(availableRooms),
-// console.log(roomPrice),
-// console.log(roomTypes),
-
-
-//  },
 
 

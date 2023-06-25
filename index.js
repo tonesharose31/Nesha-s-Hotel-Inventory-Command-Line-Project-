@@ -1,58 +1,59 @@
 
-const { readJSONFile, writeJSONFile } = require("./src/helpers");
-const { create, index,show,destroy,update,score } = require("./src/controller")
+const { readJSONFile, writeJSONFile } = require("./src/fs-helpers");
+const { create,index,show,update,destroy } = require("./src/controller")
 const inform = console.log
 
 const run = () => {
 
-    
-const action = process.argv[2];
-const animal = process.argv[3];
-   
-    let assets = readJSONFile("./data", "sampleHotelList.json")
+    infrorm("It's Nesha's Hotel App");
+
+    let assets = readJSONFile("./src/data", "hotels.json")
     
     let writeToFile = false;
     let updatedHotels = [];
+
+
+    const action = process.argv[2];
+    const hotels = process.argv[3];
    
     switch (action) {
         
-        case "index" :
-            const allAnimals = index(assets)
-            inform(allAnimals);
+            case "index" :
+            const hotelList = index(assets);
+            inform(hotelList);
             break;   
        
         case "create" :
-           inform("CREATE IS FIRING")
-            updatedHotels = create(assets, animal) 
+            updatedHotels = create(assets, hotels);
             writeToFile = true;
             break;
         
         case "show" :
-            const foundAnimal = show(assets, animal)
-           inform(foundAnimal)
+            const showHotels= show(assets, hotels)
+           inform(showHotels);
             break ;  
        
         case "update" :
-          inform(animal,  " ")
-            updatedAnimals = update(assets, animal, process.argv[4]);
+         updatedHotels = update(assets, hotels, process.argv[4]);
             writeToFile = true;
             break; 
         
         case "destroy" :
-            updatedAnimals = destroy(assets, animal);
+            updatedHotels = destroy(assets, hotels);
             writeToFile = true;
             break ;  
     
         case "score" :
-            imform(score(assets))
+            inform(score(assets))
             break; 
+
         default :
       inform("hey there was an error")  
     }
     if (writeToFile) {
         inform("new data detected - updating")
         
-        writeJSONFile("./data", "animals-data.json", updatedAnimals)
+        writeJSONFile("./data", "hotels.json", updatedHotels)
     }
 
 }
@@ -60,5 +61,3 @@ const animal = process.argv[3];
 
 run()
 
-
-//This is where it got hazy for me!

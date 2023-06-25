@@ -24,7 +24,6 @@ function generateHotelsFactory(numObjects){
 
     for(let i = 0; i< numObjects; i++){
         hotelArray.push(myHotelChoices())
-
         }
         return hotelArray;
     }

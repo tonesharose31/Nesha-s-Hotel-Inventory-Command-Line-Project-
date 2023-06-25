@@ -1,24 +1,21 @@
 
-const inform = console.log;
+const data = require("./hotels")
 const { nanoid } = require("nanoid");
 const chalk = require("chalk");
-const data = require("./hotels.json")
 
-function create( goCart,newTels) {
-    const index = data.find(
-        (hotels) => hotels.hotelDesguise=== newTels
-    );
-const hotelCheck = {
+function create( id,hotelNames, roomPrice ,availableRooms,room) {
+    
+const newHotel = {
          id: `${nanoid(6)}`,
-        hotelDesguise : newTels,
-        roomPrice : index.currencyUSD,
+        hotelNames: index.hotelNames,
+        roomPrice : index.roomPrice,
         availableRooms : index.availableRooms,
-        room: index.room
+        roomTypes: index.room
         }
-        goCart.push(hotelCheck)
-        return goCart
-        }
+     data.push(newHotel)
 
+     console.log("You have successfully created a new Hotel!");
+        }
 
 
         function index(goCart){

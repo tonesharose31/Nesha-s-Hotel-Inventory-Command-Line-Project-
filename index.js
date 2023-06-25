@@ -21,7 +21,8 @@ const run = () => {
             const hotelList = index(assets);
             inform(hotelList);
             break;   
-       
+
+
         case "create" :
             updatedHotels = create(assets, hotels,);
             writeToFile = true;
